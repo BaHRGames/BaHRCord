@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин | BAHRCORD</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #000000, #001414);
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(to right, #00ffe0, #0077ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: fadeInDown 1s ease-in-out;
+        }
+        .section {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: rgba(0, 255, 255, 0.05);
+            border-radius: 10px;
+            animation: fadeIn 1.2s ease-in-out;
+        }
+        .section h2 {
+            color: #00ffe0;
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 20px;
+            background-color: #00ffe0;
+            color: #000;
+            font-weight: bold;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .back-button:hover {
+            background-color: #00aaff;
+        }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Магазин BAHRCORD</h1>
+
+    <div class="section">
+        <h2>🪙 Премиум-подписка</h2>
+        <p>Станьте премиум-пользователем и получите доступ к эксклюзивным возможностям, кастомизации и дополнительным плюшкам!</p>
+    </div>
+
+    <div class="section">
+        <h2>💬 Стикеры</h2>
+        <p>Покупайте уникальные стикеры, чтобы делать ваше общение ещё ярче и веселее!</p>
+    </div>
+
+    <div class="section">
+        <h2>🎁 Подарки</h2>
+        <p>Отправляйте подарки друзьям, поздравляйте с праздниками и просто поднимайте настроение!</p>
+    </div>
+
+    <a class="back-button" href="https://sites.google.com/view/bahrcord/alphatest">⬅ На главную</a>
+</body>
+</html>
