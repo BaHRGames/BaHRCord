@@ -6,49 +6,109 @@
     <title>Магазин | BAHRCORD</title>
     <style>
         body {
-            background: linear-gradient(to bottom, #000000, #001414);
-            color: white;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            padding: 40px 20px;
-            max-width: 900px;
-            margin: auto;
-            text-align: center;
+            background: linear-gradient(145deg, #0a0a0a, #121212);
+            color: #ffffff;
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
         }
-        h1 {
-            font-size: 2.5rem;
-            background: linear-gradient(to right, #00ffe0, #0077ff);
+
+        header {
+            text-align: center;
+            padding: 60px 20px 20px;
+            background: radial-gradient(circle, #00ffe0 0%, #002f2f 100%);
+            animation: fadeInDown 1s ease;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #ffffff, #00ffe0);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            animation: fadeInDown 1s ease-in-out;
         }
-        .section {
-            margin-top: 40px;
-            padding: 20px;
-            background-color: rgba(0, 255, 255, 0.05);
-            border-radius: 10px;
-            animation: fadeIn 1.2s ease-in-out;
+
+        header p {
+            font-size: 1.2rem;
+            color: #c0ffff;
         }
-        .section h2 {
+
+        .store-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 60px 40px;
+            animation: fadeIn 1.2s ease;
+        }
+
+        .item {
+            background: #1a1a1a;
+            border: 2px solid #00ffe0;
+            border-radius: 20px;
+            padding: 25px;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            position: relative;
+        }
+
+        .item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 255, 224, 0.2);
+        }
+
+        .item h2 {
             color: #00ffe0;
+            font-size: 1.5rem;
         }
-        .back-button {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 10px 20px;
-            background-color: #00ffe0;
-            color: #000;
+
+        .item p {
+            color: #bbbbbb;
+            margin: 10px 0 20px;
+        }
+
+        .price {
+            color: #00ffa5;
             font-weight: bold;
-            border-radius: 8px;
+            font-size: 1.2rem;
+        }
+
+        .buy-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background: #00ffe0;
+            color: #000;
             text-decoration: none;
-            transition: background-color 0.3s ease;
+            border-radius: 10px;
+            transition: background 0.3s ease;
         }
-        .back-button:hover {
-            background-color: #00aaff;
+
+        .buy-btn:hover {
+            background: #00c2aa;
         }
+
+        .back-home {
+            text-align: center;
+            margin: 40px;
+        }
+
+        .back-home a {
+            color: #00ffe0;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-home a:hover {
+            color: #00c2aa;
+        }
+
         @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-20px); }
+            from { opacity: 0; transform: translateY(-30px); }
             to { opacity: 1; transform: translateY(0); }
         }
+
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
@@ -56,23 +116,43 @@
     </style>
 </head>
 <body>
-    <h1>Магазин BAHRCORD</h1>
+    <header>
+        <h1>Магазин BAHRCORD</h1>
+        <p>Поддержи проект и укрась свой профиль!</p>
+    </header>
 
-    <div class="section">
-        <h2>🪙 Премиум-подписка</h2>
-        <p>Станьте премиум-пользователем и получите доступ к эксклюзивным возможностям, кастомизации и дополнительным плюшкам!</p>
+    <section class="store-section">
+        <div class="item">
+            <h2>BAHR Premium</h2>
+            <p>Получай доступ к эксклюзивным функциям, кастомизации профиля и уникальным фонам.</p>
+            <div class="price">149₽ / месяц</div>
+            <a href="#" class="buy-btn">Купить</a>
+        </div>
+
+        <div class="item">
+            <h2>Набор "Праздничный"</h2>
+            <p>5 праздничных стикеров, 3 открытки и 1 уникальный подарок для друзей.</p>
+            <div class="price">79₽</div>
+            <a href="#" class="buy-btn">Купить</a>
+        </div>
+
+        <div class="item">
+            <h2>Пак "Мемы"</h2>
+            <p>10 мемных стикеров, чтобы сделать общение ещё веселее.</p>
+            <div class="price">59₽</div>
+            <a href="#" class="buy-btn">Купить</a>
+        </div>
+
+        <div class="item">
+            <h2>Сюрприз-бокс</h2>
+            <p>Не знаешь, что подарить? Оформи случайный бокс и удиви себя или друга!</p>
+            <div class="price">99₽</div>
+            <a href="#" class="buy-btn">Купить</a>
+        </div>
+    </section>
+
+    <div class="back-home">
+        <a href="https://sites.google.com/view/bahrcord/alphatest">⟵ Вернуться на главную</a>
     </div>
-
-    <div class="section">
-        <h2>💬 Стикеры</h2>
-        <p>Покупайте уникальные стикеры, чтобы делать ваше общение ещё ярче и веселее!</p>
-    </div>
-
-    <div class="section">
-        <h2>🎁 Подарки</h2>
-        <p>Отправляйте подарки друзьям, поздравляйте с праздниками и просто поднимайте настроение!</p>
-    </div>
-
-    <a class="back-button" href="https://sites.google.com/view/bahrcord/alphatest">⬅ На главную</a>
 </body>
 </html>
